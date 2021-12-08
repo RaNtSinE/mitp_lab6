@@ -132,6 +132,7 @@ class App extends React.Component{
                 let charPos = 0;
                 let stringPos = 0;
                 if (e.key === "Enter") {
+                    e.preventDefault();
                     char = "";
                     stringPos = this.state.cursorPosition[0] + 1;
                     let head = text[this.state.cursorPosition[0]].substr(0, this.state.cursorPosition[1]);
@@ -154,7 +155,7 @@ class App extends React.Component{
     }
 
     setText(text) {
-        this.setState({text: text});
+        this.setState({text: text, cursorPosition: [0, 0]});
     }
 
     render() {

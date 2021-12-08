@@ -19,8 +19,10 @@ class Upload extends React.Component{
         let files = e.target.files;
         let file = files[0];
         let reader = new FileReader();
-        reader.onload = this.parseData;
-        reader.readAsText(file);
+        if (file) {
+            reader.onload = this.parseData;
+            reader.readAsText(file);
+        }
     }
 
     parseData(event) {
