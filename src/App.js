@@ -117,9 +117,7 @@ class App extends React.Component{
                 }
                 break;
             case "Delete":
-                console.log(this.state.cursorPosition[1])
-                console.log(this.state.text[this.state.cursorPosition[0]].length)
-                if (this.state.text[this.state.cursorPosition[0]].length === this.state.cursorPosition[1] && this.state.cursorPosition[0] < this.state.text.length) {
+                if (this.state.text[this.state.cursorPosition[0]].length === this.state.cursorPosition[1] && this.state.text[this.state.cursorPosition[0] + 1] && this.state.cursorPosition[0] < this.state.text.length) {
                     text[this.state.cursorPosition[0]] = text[this.state.cursorPosition[0]] + text[this.state.cursorPosition[0] + 1];
                     text.splice(this.state.cursorPosition[0] + 1, 1);
                 } else {
