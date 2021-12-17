@@ -22,14 +22,6 @@ class EditSpace extends React.Component{
         this.setState({cursorVisible: !this.state.cursorVisible});
     }
 
-    onFocus() {
-        console.log("focus");
-    }
-
-    onClick() {
-        console.log("click")
-    }
-
     render() {
         // let leftText = this.props.text.substr(0, this.props.cursorPositon);
         // let rightText = this.props.text.substr(this.props.cursorPositon, this.props.text.length);
@@ -50,7 +42,7 @@ class EditSpace extends React.Component{
         if (!this.state.cursorVisible)
             display = "none";
         return (
-            <div className="EditSpace" onFocus={this.onFocus}>
+            <div className="EditSpace">
                 {leftText}<span className={"Cursor"} style={{display: display}}>|</span>
                 {rightText}
             </div>
