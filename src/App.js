@@ -150,8 +150,6 @@ class App extends React.Component{
                     cursorPosition: [stringPos, charPos]});
                 break;
         }
-        console.log(this.state.cursorPosition)
-        console.log(e.key);
     }
 
     setText(text) {
